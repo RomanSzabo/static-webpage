@@ -1,0 +1,13 @@
+<div class='container-md'>
+  <span class='p-input-icon-left'>
+    <i class='pi pi-search'></i>
+    <input type='number' pInputText [(ngModel)]='todoId' placeholder='ToDo Id'>
+  </span>&nbsp;&nbsp;
+  <p-button label='Search' [loading]='isLoading' (onClick)='search()'></p-button>
+  <p-divider></p-divider>
+  <div *ngIf='todo'>
+    <p-card style='width: 100%' header='ToDo #{{todo.id}}'>
+      {{todo.name}}
+    </p-card>
+  </div>
+</div>
