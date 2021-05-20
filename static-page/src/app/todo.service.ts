@@ -14,7 +14,7 @@ export class TodoService {
   constructor(private http: HttpClient) { }
 
   getTodo(id: number): Observable<TodoModel> {
-    return this.http.get<TodoModel>(this.baseUrl + 'todo/' + id);
+    return this.http.get<TodoModel>(this.baseUrl + 'api/todo?id=' + id);
   }
 
 }
